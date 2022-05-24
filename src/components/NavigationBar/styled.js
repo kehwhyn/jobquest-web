@@ -10,8 +10,6 @@ export const Container = styled.div`
   width: 100%;
   background: ${colors.white};
   padding-bottom: 1rem;
-
-  position: fixed;
   bottom: 0px;
 
   button {
