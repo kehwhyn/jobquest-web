@@ -51,8 +51,13 @@ class UserService {
   }
 
   static async signup(data) {
-    return axios
-      .post(
+    if (data.password.length<6) {
+      return {
+        success: false,
+        desc: strings.errors.genericError,
+      };
+    }
+    return axios.post(
         RESOURCES.SIGNUP,
         JSON.stringify({
           [PARAMS.EMAIL]: data.email,
