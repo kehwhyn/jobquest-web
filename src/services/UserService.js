@@ -54,7 +54,7 @@ class UserService {
     if (data.password.length<6) {
       return {
         success: false,
-        desc: strings.errors.genericError,
+        desc: strings.errors.passwordError,
       };
     }
     return axios.post(
@@ -106,6 +106,12 @@ class UserService {
   }
 
   static updateUser(id, data) {
+    if (data.password.length<6) {
+      return {
+        success: false,
+        desc: strings.errors.passwordError,
+      };
+    }
     return axios
       .patch(`${BASE_USER}${id}`, data)
       .then((result) => {

@@ -11,5 +11,9 @@ export const SHIFTS = [
   {
     label: "Noite",
     name: 'noite'
+  },
+  {
+    label: "Flexvel",
+    name: 'flexivel'
   }
 ];
