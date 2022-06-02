@@ -13,7 +13,7 @@ export const SHIFTS = [
     name: 'noite'
   },
   {
-    label: "Flexvel",
+    label: "Flexível",
     name: 'flexivel'
   }
 ];
