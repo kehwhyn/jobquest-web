@@ -30,6 +30,7 @@ function EditCompanyProfile({ companyData, onSubmit }) {
   const [estado, setEstado] = useState(companyData?.endereco?.estado);
   const [site, setSite] = useState(companyData?.url_site);
   const [razaoSocial, setRazaoSocial] = useState(companyData?.razaoSocial);
+  const [logo_url, setLogoUrl] = useState(companyData?.logo_url);
 
   useEffect(() => {
     setDescription(companyData?.descricao);
@@ -44,6 +45,7 @@ function EditCompanyProfile({ companyData, onSubmit }) {
     setEstado(companyData?.endereco?.estado);
     setSite(companyData?.url_site);
     setRazaoSocial(companyData?.razao_social);
+    setLogoUrl(companyData?.logo_url);
   }, [companyData]);
 
   const handleSubmit = (event) => {
@@ -52,6 +54,7 @@ function EditCompanyProfile({ companyData, onSubmit }) {
       descricao,
       razao_social: razaoSocial,
       url_site: site,
+      logo_url: logo_url,
       id_usuario: companyData.id_usuario,
       contato: {
         telefone_casa: homePhone,
@@ -112,6 +115,17 @@ function EditCompanyProfile({ companyData, onSubmit }) {
           value={cnpj}
           onChange={({ target }) => setCnpj(target.value)}
           mask="99.999.999/9999-99"
+        />
+      </FormSection>
+
+      <FormSection>
+        <Subtitle>Qual o link para sua logo?</Subtitle>
+        <Input
+          name="logo_url"
+          id="logo_url"
+          type="text"
+          value={logo_url}
+          onChange={({ target }) => setLogoUrl(target.value)}
         />
       </FormSection>
       <FormSection>
