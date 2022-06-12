@@ -75,7 +75,7 @@ export default ({ vacancy, disableActions }) => {
       handleMatch(false);
       showNotification("Parabéns! Seu perfil se encaixa na vaga");
     }
-  }, [
+  }, [disableActions,
     itemRef,
     isCollapsed,
     direction,
