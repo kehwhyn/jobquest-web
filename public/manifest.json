@@ -2,10 +2,10 @@
 "description": "",
 "shortcuts": [
   {
-    "name": "Start Live Session",
-    "short_name": "Start Live",
-    "description": "Jump direction into starting or joining a live session",
-    "url": "/?startLive",
+    "name": "Job Quest",
+    "short_name": "Job Quest",
+    "description": "Encontre as melhores vagas agora",
+    "url": "/",
     "icons": [
       {
         "src": "https://pwabuilder.com/assets/icons/icon_192.png",
