@@ -9,6 +9,7 @@ const strings = {
     },
     errors: {
         genericError: "Erro Inesperado.",
+        passwordError: "Senha deve ter no mínimo 6 caracteres.",
         requiredError: "Campo obrigatório"
     },
     signup: {

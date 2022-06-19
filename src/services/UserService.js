@@ -51,8 +51,13 @@ class UserService {
   }
 
   static async signup(data) {
-    return axios
-      .post(
+    if (data.password.length<6) {
+      return {
+        success: false,
+        desc: strings.errors.passwordError,
+      };
+    }
+    return axios.post(
         RESOURCES.SIGNUP,
         JSON.stringify({
           [PARAMS.EMAIL]: data.email,
@@ -101,6 +106,12 @@ class UserService {
   }
 
   static updateUser(id, data) {
+    if (data.password.length<6) {
+      return {
+        success: false,
+        desc: strings.errors.passwordError,
+      };
+    }
     return axios
       .patch(`${BASE_USER}${id}`, data)
       .then((result) => {
