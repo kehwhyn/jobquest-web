@@ -133,7 +133,7 @@ export default () => {
           </TopTitle>
 
           <CompanyLogoDiv>
-            <CompanyLogo src={user.userData.url_foto} />
+            <CompanyLogo src={user.userData.empresa.logo_url} />
           </CompanyLogoDiv>
           {skillsLoading ? (
             <Loader
