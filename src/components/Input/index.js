@@ -54,7 +54,7 @@ const Input = ({
         <styles.Input
           placeholder={placeholder}
           maxLength={maxLength}
-          required={required}
+          required={false}
           disabled={disabled}
           type={type}
           onBlur={onBlur}

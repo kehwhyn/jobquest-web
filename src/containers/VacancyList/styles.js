@@ -27,6 +27,11 @@ export const ListWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding-bottom: 5rem;
+
+  @media (max-width: 2000px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const NoData = styled.h3`
