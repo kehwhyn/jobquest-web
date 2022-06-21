@@ -18,7 +18,7 @@ export default ({ vacancy, disableActions }) => {
   const [hasMatch, handleMatch] = useState(false);
 
   const handleAction = async (decision) => {
-    if (!authenticatedUser) {
+    if (authenticatedUser.userData.tipo_usuario === "anonimo") {
       showNotification(
         "Você precisa estar logado para realizar esta ação",
         "Erro autenticação",
